@@ -73,8 +73,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any questions or feedback, you can reach out to:
 
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **GitHub**: [your-github-profile](https://github.com/your-github-profile)
+- **GitHub**: [your-github-profile](https://github.com/Yulauk)
 
 ---
 
