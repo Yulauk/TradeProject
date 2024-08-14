@@ -73,7 +73,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any questions or feedback, you can reach out to:
 
-- **GitHub**: [your-github-profile](https://github.com/Yulauk)
+- **GitHub**: [my-github-profile](https://github.com/Yulauk)
 
 ---
 
