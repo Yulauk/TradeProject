@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block title %}Test strategy{% endblock %}
+
+
+
+{% block body %}
+<div class="container mt-5">
+    <h3>Testing trade algorithm strategy</h3>
+</div>
+
+<div class="container mt-5" id="teststrategy">
+        <br><br>
+        <h5>1. MaCrossStrategy</h5>
+        <br>
+        <p>MA Cross Strategy The MA Cross Strategy is based on the Moving Average Cross study.
+        Signals generated in the study are used to trigger automatic trades.
+        This automated trading strategy was created to demonstrate the mechanics of an automatic trade and is not intended for actual use.
+        A more comprehensive strategy that may include multiple studies, margins and stops could be developed.
+        This strategy’s definition is further expressed in the code given in the calculation below.</p>
+    <hr class="mb-4">
+        <h6>Choose pair for strategy analyzing</h6>
+        <h6>Your cash: {{ cash }}$</h6>
+        <h6>sharperatio: {{ sharperatio }}</h6>
+          <h6>Profit: {{ message }}</h6>
+        <br>
+    <hr class="mb-4">
+
+    <form method="POST">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="fast">MA fast</label>
+            <input class="form-control" type="number" step="1.0" placeholder="ma_fast period" name="ma_fast" id="fast">
+
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="slow">MA slow</label>
+            <input class="form-control" type="number" step="1.0"  placeholder="ma_slow period" name="ma_slow" id="slow">
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="Percentage">Percentage</label>
+
+            <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">%</span>
+            </div>
+            <input type="text" name='percents' class="form-control" id="Percentage" placeholder="input" required="">
+            <div class="invalid-feedback" style="">
+              Your username is required.
+            </div>
+          </div>
+          </div>
+            <div class="col-md-3 mb-3">
+
+
+            <label for="trade pair">Trade pair</label>
+            <select name="ticker" class="custom-select d-block w-100" id="trade pair" required="">
+              <option value="Select">Select trade pair for strategy<</option>
+                <option name=ticker value="BTC-USD" >BTCUSD</option>
+                <option name=ticker value="ETH-USD" >ETHUSD</option>
+                <option name=ticker value="BNB-USD" >BNBUSD</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="timeframe">Timeframe</label>
+            <select name='timeframe' class="custom-select d-block w-100" id="timeframe" required="">
+                <option value="Select">Select timeframe "Intraday data cannot extend last 60 days"</option>
+
+                <option name=timeframe value="5m" >5min</option>
+                <option name=timeframe value="15m" >15min</option>
+                <option name=timeframe value="30m" >30min</option>
+                <option name=timeframe value="1h" >1Hour</option>
+                <option name=timeframe value="1d" >Days</option>
+                <option name=timeframe value="1wk" >Weeks</option>
+                <option name=timeframe value="1mo" >Months</option>
+                <option name=timeframe value="3mo" >3Month</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+<!--              <p>Start date <input type="date"  placeholder="start date" name="start"> End date <input type="date"  placeholder="end date" name="end"></p>-->
+
+
+
+            <label for="Start_date">Start date</label>
+              <input type="date" class="custom-select d-block w-100"  placeholder="start date" name="start" id="Start_date">
+            <div class="invalid-feedback">
+              Please provide a valid start date.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="End_date">End date</label>
+<!--              <input type="date"  placeholder="end date" name="end">-->
+            <input type="date" class="custom-select d-block w-100"  placeholder="start date" name="end" id="End_date">
+            <div class="invalid-feedback">
+              Please provide a valid end date.
+            </div>
+            </div>
+          </div>
+
+
+
+<hr class="mb-4">
+
+<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+        <br><br>
+
+<!--      </form>-->
+
+
+<!--        <br><br>-->
+<!--        <input type="number"  step="1.0"  class="" placeholder="ma_fast period" name="ma_fast">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <input type="number"  step="1.0"  placeholder="ma_fast period" name="ma_slow">-->
+<!--        <br><br>-->
+<!--        <input type="number"  step="0.1"  placeholder="PercentSizer" name="percents">-->
+<!--        <br><br>-->
+
+<!--        <select name="ticker">-->
+
+<!--                <option value="Select">Select trade pair for strategy</option>-->
+<!--                <option name=ticker value="BTC-USD" >BTCUSD</option>-->
+<!--                <option name=ticker value="ETH-USD" >ETHUSD</option>-->
+<!--                <option name=ticker value="BNB-USD" >BNBUSD</option>-->
+<!--        </select>-->
+
+<!--        <br><br>-->
+<!--        <select name="timeframe">-->
+<!--                <option value="Select">Select timeframe</option>-->
+<!--                <option name=timeframe value="Day" >Days</option>-->
+<!--                <option name=timeframe value="Week" >Weeks</option>-->
+<!--                <option name=timeframe value="Month" >Months</option>-->
+<!--                <option name=timeframe value="Month" >Years</option>-->
+<!--&lt;!&ndash;                <option name=ticker value="ETH/USD" >BTCUSD</option>&ndash;&gt;-->
+<!--        </select>-->
+<!--        <br><br>-->
+<!--        <p>Start date <input type="date"  placeholder="start date" name="start"> End date <input type="date"  placeholder="end date" name="end"></p>-->
+
+<!--        <br><br>-->
+<!--        <input type="submit">-->
+
+<!--</div>-->
+
+<!--    </form>-->
+
+        </form>
+        </div>
+<br><br>
+
+
+{% endblock %}
+

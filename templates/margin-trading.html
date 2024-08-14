@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Margin trading{% endblock %}
+
+
+
+{% block body %}
+<div class="container mt-5">
+    <h3>On this page, see the margin difference in %
+in the spot market between the price on the Kucoin exchange and AlpacaMarket</h3>
+
+</div>
+<div class="container mt-5" id="teststrategy">
+    <br><br>
+    <form method="POST">
+        <h5>Choise pair for margin analyzing on realtime markets</h5>
+            <hr class="mb-4">
+            <div class="col-md-13 mb-3" id="marginchange">
+                <label for="trade pair">Select trade pair for margin</label>
+                <br>
+                <select name="ticker" class="custom-select d-block w-100" id="trade pair" required="">
+                <option value="Select">Select trade pair for margin</option>
+                <option name=ticker value="BTC/USDT" >BTCUSD</option>
+                <option name=ticker value="ETH/USDT" >ETHUSD</option>
+                <option name=ticker value="LTC/USDT" >LTCUSD</option>
+        </select>
+                <br>
+            </div>
+
+
+<hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+        <br><br>
+    </form>
+
+
+    {% if '' in lst %}
+        {% else %}
+
+    <div class="row">
+        <br><br>
+        <div class="container mt-5">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table id="dtDynamicVerticalScrollExample" class="table table-striped table-bordered table-sm" cellspacing="0"
+  width="100%">
+
+        {% endif %}
+        {% for el in lst %}
+  <thead>
+    <tr>
+      <th class="th-sm">Exchange_1
+      </th>
+      <th class="th-sm">Trading pair
+      </th>
+      <th class="th-sm">Price_{{ el[0] }}
+      </th>
+      <th class="th-sm">Diferent in %
+      </th>
+      <th class="th-sm">Price_{{ el[6] }}
+      </th>
+      <th class="th-sm">Trading pair
+      </th>
+        <th class="th-sm">Exchange_2
+      </th>
+    </tr>
+  </thead>
+
+
+
+
+          <tbody>
+  <tr>
+      <td>{{ el[0] }}</td>
+      <td>{{ el[1] }}</td>
+      <td>{{ el[2] }}</td>
+      <td>{{ el[3] }}</td>
+      <td>{{ el[4] }}</td>
+      <td>{{ el[5] }}</td>
+      <td>{{ el[6] }}</td>
+
+  </tr>
+    </tbody>
+{% endfor %}
+</table>
+</div>
+</div></div></div>
+<br><br>
+{% endblock %}
