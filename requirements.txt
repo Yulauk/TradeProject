@@ -55,7 +55,7 @@ jupyter_client==8.0.3
 jupyter_core==5.2.0
 jupyterlab-widgets==3.0.5
 kiwisolver==1.4.4
-kucoin-python==1.0.11
+kucoin-python==1.0.23
 llvmlite==0.39.1
 lxml==4.9.2
 MarkupSafe==2.1.2

@@ -15,7 +15,8 @@ import yfinance as yf
 import backtrader as bt
 import backtrader.analyzers as btanalyzers
 
-from kucoin.client import Client
+from kucoin.client import Trade as Client
+# from kucoin.client import Client
 from kucoin.market import market
 
 api_key = config.kucoin_api_key
